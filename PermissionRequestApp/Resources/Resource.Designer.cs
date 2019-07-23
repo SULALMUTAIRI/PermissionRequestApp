@@ -3101,16 +3101,16 @@ namespace PermissionRequestApp
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int activity_login = 2130968602;
+			public const int activity_main = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int activity_main = 2130968603;
+			public const int activity_request = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int content_login = 2130968604;
+			public const int content_main = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int content_main = 2130968605;
+			public const int content_request = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
 			public const int design_bottom_navigation_item = 2130968606;

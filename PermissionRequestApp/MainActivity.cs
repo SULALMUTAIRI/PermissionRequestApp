@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -12,11 +13,22 @@ namespace PermissionRequestApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        Button logIn;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_main); 
+            SetContentView(Resource.Layout.activity_main);
+
+            logIn = (Button)FindViewById(Resource.Id.btn_signIn);
+            logIn.Click += LogIn_Click;  
+        }
+
+        private void LogIn_Click(object sender, EventArgs e)
+        {
+            Intent addRequestIntent = new Intent(this, typeof(RequestActivity));
+            StartActivity(addRequestIntent);
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
